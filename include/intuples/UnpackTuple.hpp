@@ -7,14 +7,7 @@
 #include <tuple>
 #include <type_traits>
 
-template <std::size_t Idx, typename Tuple>
-struct TupleXType;
-
-template <std::size_t Idx, typename... Types>
-struct TupleXType<Idx, std::tuple<Types...>> {
-  using type = typename std::tuple_element<
-      Idx, std::tuple<Types...>>::type;
-};
+namespace intuples {
 
 // Generates typenames and declares variables from Tuple
 // Pattern is: v0, v1, v2, ... v0_t, v1_t, ...
@@ -25,3 +18,5 @@ struct TupleXType<Idx, std::tuple<Types...>> {
   v0_t v0;                                                \
   v1_t v1;                                                \
   v2_t v2;
+
+}  // namespace intuples

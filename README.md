@@ -29,11 +29,11 @@ Existing macros are:
 This is a simple example:
 
 ```{.cpp}
-#include<intuples/Unpack.hpp>
+#include<intuples/UnpackTuple.hpp>
 
 int main() {
-  using MyTup = std::tuple<int, char, float>;
-  UNPACK_TYPEDEFS_VARS3(MyTup);
+  using MyTupType = std::tuple<int, char, float>;
+  UNPACK_TYPEDEFS_VARS3(MyTupType);
   // check if v2 exists
   v2 = 5.0;
   assert(v2 == 5.0);
