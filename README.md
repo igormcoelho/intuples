@@ -20,7 +20,7 @@ please help us :)
 
 Existing macros are:
 
-- UNPACK_TYPEDEFS_VARSX:
+- UNPACK_TYPEDEFS_VARSX(TT): given a tuple type TT...
    * unpack X variables named v0, v1, v2, ... , vX-1
    * define X types named v0_t, v1_t, v2_t, ... , vX-1_t
 
@@ -31,7 +31,7 @@ This is a simple example:
 ```{.cpp}
 #include<intuples/UnpackTuple.hpp>
 
-int main() {
+int main() {MyTup
   using MyTupType = std::tuple<int, char, float>;
   UNPACK_TYPEDEFS_VARS3(MyTupType);
   // check if v2 exists
