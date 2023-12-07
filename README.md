@@ -2,6 +2,8 @@
 
 C++ library for Inline Tuples
 
+![C++17](https://img.shields.io/badge/std-c%2B%2B17-blue)
+
 ## General Idea
 
 This project aims to be simple Header Only library, where a C++ Tuple
