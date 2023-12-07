@@ -39,10 +39,10 @@ TEST_CASE("test UNPACK_TUPLE_TO2") {
 using P2 = std::pair<int, char>;
 class StaticTest {
  public:
-  UNPACK_PREFIX_TYPENAMES_VARS2(P2, inline static);
+  UNPACK_STORAGE_TYPENAMES_VARS2(P2, inline static);
 };
 
-TEST_CASE("test UNPACK_PREFIX_TYPENAMES_VARS2") {
+TEST_CASE("test UNPACK_STORAGE_TYPENAMES_VARS2") {
   using P2 = std::pair<int, char>;
 
   REQUIRE(StaticTest::v0 == 0);
