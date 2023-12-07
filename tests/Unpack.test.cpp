@@ -7,7 +7,7 @@
 
 TEST_CASE("test UNPACK_TYPEDEFS_VARS") {
   using MyTup = std::tuple<int, char, float>;
-  UNPACK_TYPEDEFS_VARS3(MyTup);
+  UNPACK_TYPENAMES_VARSX(MyTup);
   // check if v2 exists
   v2 = 5.0;
   REQUIRE(v2 == 5.0);

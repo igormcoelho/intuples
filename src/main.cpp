@@ -11,7 +11,7 @@ int main() {
   using MyTupType = std::tuple<int, char, float>;
 
   // Generate typedefs
-  UNPACK_TYPEDEFS_VARS3(MyTupType);
+  UNPACK_TYPENAMES_VARSX(MyTupType);
 
   // Access and print the types
   std::cout << "Type v2: " << typeid(v2_t).name()
