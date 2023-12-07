@@ -33,3 +33,19 @@ TEST_CASE("test UNPACK_TUPLE_TO2") {
   REQUIRE(x == 0);
   REQUIRE(y == 'A');
 }
+
+// testing tuple unpacking with 'inline static' vars
+
+using P2 = std::pair<int, char>;
+class StaticTest {
+ public:
+  UNPACK_PREFIX_TYPENAMES_VARS2(P2, inline static);
+};
+
+TEST_CASE("test UNPACK_PREFIX_TYPENAMES_VARS2") {
+  using P2 = std::pair<int, char>;
+
+  REQUIRE(StaticTest::v0 == 0);
+  REQUIRE(typeid(StaticTest::v1_t).name() ==
+          std::string{"c"});
+}

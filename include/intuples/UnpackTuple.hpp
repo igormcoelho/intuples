@@ -25,6 +25,18 @@ namespace intuples {
   using v2_t = typename std::tuple_element<2, TT>::type; \
   v2_t v2;
 
+#define UNPACK_PREFIX_TYPENAMES_VARS1(TT, PRE)           \
+  using v0_t = typename std::tuple_element<0, TT>::type; \
+  PRE v0_t v0;
+#define UNPACK_PREFIX_TYPENAMES_VARS2(TT, PRE)           \
+  UNPACK_PREFIX_TYPENAMES_VARS1(TT, PRE)                 \
+  using v1_t = typename std::tuple_element<1, TT>::type; \
+  PRE v1_t v1;
+#define UNPACK_PREFIX_TYPENAMES_VARS3(TT, PRE)           \
+  UNPACK_PREFIX_TYPENAMES_VARS2(TT, PRE)                 \
+  using v2_t = typename std::tuple_element<2, TT>::type; \
+  PRE v2_t v2;
+
 // Given Tuple object (TObj), unpack into existing variables
 // UNPACK_TUPLE_TOX
 
