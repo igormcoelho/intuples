@@ -17,12 +17,12 @@ namespace intuples {
   using v0_t = typename std::tuple_element<0, TT>::type; \
   v0_t v0;
 #define UNPACK_TYPENAMES_VARS2(TT)                       \
+  UNPACK_TYPENAMES_VARS1(TT)                             \
   using v1_t = typename std::tuple_element<1, TT>::type; \
-  v1_t v1;                                               \
-  UNPACK_TYPENAMES_VARS1(TT)
+  v1_t v1;
 #define UNPACK_TYPENAMES_VARS3(TT)                       \
+  UNPACK_TYPENAMES_VARS2(TT)                             \
   using v2_t = typename std::tuple_element<2, TT>::type; \
-  v2_t v2;                                               \
-  UNPACK_TYPENAMES_VARS2(TT)
+  v2_t v2;
 
 }  // namespace intuples
