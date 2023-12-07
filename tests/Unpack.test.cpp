@@ -24,3 +24,12 @@ TEST_CASE("test UNPACK_TYPENAMES_VARS2") {
   // check if type v2_t exists
   REQUIRE(typeid(v1_t).name() == std::string{"c"});
 }
+
+TEST_CASE("test UNPACK_TUPLE_TO2") {
+  std::pair<int, char> p2{0, 'A'};
+  int x = 1;
+  char y = 'B';
+  UNPACK_TUPLE_TO2(p2, x, y);
+  REQUIRE(x == 0);
+  REQUIRE(y == 'A');
+}

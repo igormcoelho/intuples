@@ -25,4 +25,17 @@ namespace intuples {
   using v2_t = typename std::tuple_element<2, TT>::type; \
   v2_t v2;
 
+// Given Tuple object (TObj), unpack into existing variables
+// UNPACK_TUPLE_TOX
+
+#define UNPACK_TUPLE_TO1(TObj, VAR0) \
+  VAR0 = std::get<0>(TObj);
+#define UNPACK_TUPLE_TO2(TObj, VAR0, VAR1) \
+  VAR0 = std::get<0>(TObj);                \
+  VAR1 = std::get<1>(TObj);
+#define UNPACK_TUPLE_TO3(TObj, VAR0, VAR1, VAR2) \
+  VAR0 = std::get<0>(TObj);                      \
+  VAR1 = std::get<1>(TObj);                      \
+  VAR2 = std::get<2>(TObj);
+
 }  // namespace intuples
